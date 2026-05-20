@@ -17,18 +17,14 @@ public class LoginServlet extends HttpServlet {
         String pass = request.getParameter("password");
 
         response.setContentType("text/html");
-
         PrintWriter out = response.getWriter();
 
-        // DEBUG
         System.out.println("USER: " + user);
         System.out.println("PASS: " + pass);
 
-        // Empty check
         if(user == null || pass == null ||
            user.trim().isEmpty() || pass.trim().isEmpty()) {
 
-            System.out.println("EMPTY LOGIN BLOCKED");
             response.sendRedirect("login.html");
             return;
         }
@@ -53,7 +49,8 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
 
-                response.sendRedirect("home.html");
+                // ✅ ONLY SERVER SIDE REDIRECT
+                response.sendRedirect(request.getContextPath() + "/home.html");
 
             } else {
 
@@ -66,9 +63,7 @@ public class LoginServlet extends HttpServlet {
             }
 
         } catch (Exception e) {
-
             e.printStackTrace();
-
             out.println("<h3 style='color:red;'>Server Error</h3>");
         }
     }
