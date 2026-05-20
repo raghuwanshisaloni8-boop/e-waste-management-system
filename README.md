@@ -28,3 +28,23 @@ This project was developed to encourage proper e-waste disposal and provide an e
 
 ## Author
 Saloni Raghuwanshi
+
+## Screenshots
+
+### Login Page
+![Login](screenshots/login-page.png)
+
+### Register Page
+![Register](screenshots/register-page.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard-page.png)
+
+### Dashboard Details
+![Dashboard Details](screenshots/dashboard-page2.png)
+
+### Admin Dashboard
+![Admin](screenshots/admin-dashboard.png)
+
+### Dark Mode
+![Dark Mode](screenshots/dark-mode-page.png)
