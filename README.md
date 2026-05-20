@@ -26,9 +26,6 @@ A full-stack web-based E-Waste Management System developed to spread awareness a
 ## Project Purpose
 This project was developed to encourage proper e-waste disposal and provide an efficient platform for managing electronic waste-related information and activities.
 
-## Author
-Saloni Raghuwanshi
-
 ## Screenshots
 
 ### Login Page
@@ -48,3 +45,6 @@ Saloni Raghuwanshi
 
 ### Dark Mode
 ![Dark Mode](screenshots/dark-mode-page.png)
+
+## Author
+Saloni Raghuwanshi
