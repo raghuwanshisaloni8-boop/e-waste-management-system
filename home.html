@@ -6,6 +6,7 @@
 <title>E-Waste Management System</title>
 
 <style>
+
 /* CONTACT */
 .contact{
     background:white;
@@ -63,6 +64,7 @@ body{
     font-weight:bold;
 }
 
+/* LINKS */
 .header a{
     color:white;
     text-decoration:none;
@@ -158,10 +160,6 @@ button{
     font-size:15px;
 }
 
-button:hover{
-    opacity:0.9;
-}
-
 /* REQUEST BOX */
 .cart-box{
     background:white;
@@ -170,10 +168,6 @@ button:hover{
     padding:20px;
     border-radius:15px;
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
-
-.cart-box h2{
-    color:#065f46;
 }
 
 /* FOOTER */
@@ -194,29 +188,75 @@ li{
     margin:10px 0;
     font-size:17px;
 }
+
+/* ================= 🌙 DARK MODE ================= */
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .contact,
+.dark-mode .about,
+.dark-mode .cart-box,
+.dark-mode .product{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark-mode .hero{
+    color:white;
+}
+
+.dark-mode .footer{
+    background:#0b3d2e;
+}
+
+/* BUTTON (RIGHT SIDE HEADER FIX) */
+.toggle-btn{
+    padding:8px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#0b3d2e;
+    color:white;
+}
+
+/* HEADER RIGHT AREA */
+.right-menu{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.right-menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- 🔐 STEP 1: DIRECT ACCESS BLOCK -->
-<script>
-if(sessionStorage.getItem("user") == null){
-    window.location.href = "login.html";
-}
-</script>
-
 <!-- HEADER -->
 <div class="header">
-    <div class="logo">
-        ♻️ E-Waste Management
-    </div>
 
-    <div>
+    <div class="logo">♻️ E-Waste Management</div>
+
+    <div class="right-menu">
+
+        <!-- DARK MODE (FIXED RIGHT) -->
+        <button class="toggle-btn" onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+
         <a href="admin.html">Admin Panel</a>
         <a href="logout">Logout</a>
+
     </div>
+
 </div>
 
 <!-- HERO -->
@@ -280,9 +320,7 @@ if(sessionStorage.getItem("user") == null){
 <!-- ABOUT -->
 <div class="about">
     <h2>About E-Waste Management</h2>
-    <p>
-        E-Waste Management System helps users to safely dispose electronic waste.
-    </p>
+    <p>E-Waste Management System helps users to safely dispose electronic waste.</p>
 </div>
 
 <!-- CONTACT -->
@@ -333,6 +371,23 @@ function searchProduct(){
         products[i].style.display = text.includes(input) ? "block" : "none";
     }
 }
+
+/* 🌙 DARK MODE */
+function toggleDarkMode(){
+    document.body.classList.toggle("dark-mode");
+
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark-mode") ? "dark" : "light"
+    );
+}
+
+window.onload = function(){
+    if(localStorage.getItem("theme") === "dark"){
+        document.body.classList.add("dark-mode");
+    }
+}
+
 </script>
 
 </body>
