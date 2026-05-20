@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Register - E-Waste</title>
+
+<style>
+body{
+    font-family:Segoe UI;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#74ebd5,#ACB6E5);
+}
+
+.box{
+    background:white;
+    width:340px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+h2{
+    color:#065f46;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:linear-gradient(90deg,#10b981,#059669);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+a{
+    text-decoration:none;
+    color:#065f46;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>♻️ Register</h2>
+
+    <!-- ✅ FIXED FORM -->
+    <form action="register" method="post">
+
+        <!-- IMPORTANT: name attributes added -->
+        <input type="text" name="username" placeholder="Enter Username" required>
+
+        <input type="password" name="password" placeholder="Enter Password" required>
+
+        <input type="email" name="email" placeholder="Enter Email" required>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p>
+        Already have account?
+        <a href="login.html">Login</a>
+    </p>
+
+</div>
+
+</body>
+
+</html>

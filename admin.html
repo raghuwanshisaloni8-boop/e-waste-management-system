@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:#ecfdf5;
+}
+
+/* HEADER */
+
+.header{
+    background:#065f46;
+    color:white;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.header a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    margin-top:30px;
+}
+
+.title h1{
+    color:#065f46;
+}
+
+/* TABLE */
+
+.table-box{
+    width:90%;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#10b981;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+/* BUTTONS */
+
+button{
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.approve{
+    background:green;
+}
+
+.reject{
+    background:red;
+}
+
+.collect{
+    background:#2563eb;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.footer{
+    background:#065f46;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <div class="logo">
+        ♻️ Admin Dashboard
+    </div>
+
+    <div>
+        <a href="home.html">Home</a>
+    </div>
+
+</div>
+
+<!-- TITLE -->
+
+<div class="title">
+
+    <h1>Manage Pickup Requests</h1>
+
+</div>
+
+<!-- TABLE -->
+
+<div class="table-box">
+
+<table>
+
+<tr>
+    <th>Product</th>
+    <th>User</th>
+    <th>Status</th>
+    <th>Actions</th>
+</tr>
+
+<tr>
+    <td>Old Mobile</td>
+    <td>Saloni</td>
+    <td style="color:orange;font-weight:bold;">
+        Pending
+    </td>
+
+    <td>
+
+        <button class="approve">
+            Approve
+        </button>
+
+        <button class="reject">
+            Reject
+        </button>
+
+    </td>
+</tr>
+
+<tr>
+    <td>Broken Laptop</td>
+    <td>Admin</td>
+    <td style="color:green;font-weight:bold;">
+        Approved
+    </td>
+
+    <td>
+
+        <button class="collect">
+            Collected
+        </button>
+
+    </td>
+</tr>
+
+<tr>
+    <td>Old Charger</td>
+    <td>User1</td>
+    <td style="color:blue;font-weight:bold;">
+        Collected
+    </td>
+
+    <td>
+
+        <button class="collect">
+            Completed
+        </button>
+
+    </td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    © 2026 E-Waste Admin Panel ♻️
+
+</div>
+
+</body>
+</html>

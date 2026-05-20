@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>E-Waste Management Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1abc9c,#2ecc71,#16a085);
+}
+
+.login-box{
+    width:380px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+.recycle{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+h1{
+    color:#16a085;
+    margin-bottom:10px;
+}
+
+p{
+    color:gray;
+    margin-bottom:25px;
+}
+
+.input-box{
+    width:100%;
+    padding:12px;
+    margin:12px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+.input-box:focus{
+    border:1px solid #16a085;
+    outline:none;
+}
+
+.login-btn{
+    width:100%;
+    padding:12px;
+    background:#16a085;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.login-btn:hover{
+    background:#138d75;
+}
+
+/* 👇 NEW REGISTER LINK STYLE */
+.register-link{
+    margin-top:15px;
+    display:block;
+    font-size:14px;
+}
+
+.register-link a{
+    color:#16a085;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.register-link a:hover{
+    text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<div class="recycle">♻️</div>
+
+<h1>E-Waste Management</h1>
+
+<p>Recycle Electronics & Save Environment</p>
+
+<form action="login" method="post">
+
+    <input type="text" name="username"
+    placeholder="Enter Username"
+    class="input-box" required>
+
+    <input type="password" name="password"
+    placeholder="Enter Password"
+    class="input-box" required>
+
+    <button type="submit" class="login-btn">
+        Login
+    </button>
+
+</form>
+
+<!-- 👇 REGISTER LINK ADDED -->
+<div class="register-link">
+    New user?
+    <a href="register.html">Create Account</a>
+</div>
+
+</div>
+
+</body>
+</html>
