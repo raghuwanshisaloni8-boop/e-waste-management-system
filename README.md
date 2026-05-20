@@ -32,7 +32,7 @@ This project was developed to encourage proper e-waste disposal and provide an e
 ![Login](screenshots/login-page.png)
 
 ### Register Page
-![Register](screenshots/register-page.png)
+![Register](screenshots/register.png)
 
 ### Dashboard
 ![Dashboard](screenshots/dashboard-page.png)
